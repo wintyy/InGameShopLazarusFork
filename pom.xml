@@ -55,6 +55,15 @@
             <artifactId>jsr305</artifactId>
             <version>3.0.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>me.wintyy</groupId>
+            <artifactId>Lazarus</artifactId>
+            <version>LIB</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Lazarus.jar</systemPath>
+        </dependency>
+
     </dependencies>
 
     <build>

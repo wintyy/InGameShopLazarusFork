@@ -2,6 +2,7 @@ package dev.risas.ingameshop.models.economy.impl;
 
 import dev.risas.ingameshop.models.economy.IEconomy;
 import dev.risas.ingameshop.utilities.ChatUtil;
+import me.qiooip.lazarus.integration.vault.Economy_Lazarus;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.economy.EconomyResponse;
 import org.bukkit.Bukkit;
@@ -20,7 +21,8 @@ import java.util.UUID;
 
 public class VaultEconomy implements IEconomy {
 
-    private Economy economy;
+    private Economy_Lazarus economy;
+
 
     public VaultEconomy() {
         RegisteredServiceProvider<Economy> rsp = Bukkit.getServicesManager().getRegistration(Economy.class);
@@ -31,7 +33,7 @@ public class VaultEconomy implements IEconomy {
         }
 
 
-        this.economy = rsp.getProvider();
+        this.economy = (Economy_Lazarus) rsp.getProvider();
         ChatUtil.logger("&aEconomy system hook with Vault found. (" + rsp.getProvider().getName() + ")");
     }
 

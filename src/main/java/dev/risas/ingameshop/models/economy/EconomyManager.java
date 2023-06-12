@@ -4,6 +4,7 @@ import dev.risas.ingameshop.InGameShop;
 import dev.risas.ingameshop.models.economy.impl.VaultEconomy;
 import dev.risas.ingameshop.utilities.ChatUtil;
 import lombok.Getter;
+import me.qiooip.lazarus.integration.vault.Economy_Lazarus;
 import org.bukkit.Bukkit;
 
 @Getter
